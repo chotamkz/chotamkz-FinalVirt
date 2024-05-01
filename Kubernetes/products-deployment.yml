@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: products
-          image: ashvinbhat/product-management:latest
+          image: chotam/product-doner:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5002
