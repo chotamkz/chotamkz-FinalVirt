@@ -18,6 +18,12 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 5003
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 5003
+            initialDelaySeconds: 15
+            periodSeconds: 10
           resources:
             requests:
               memory: "64Mi"
